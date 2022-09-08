@@ -1,3 +1,4 @@
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 version: 2
 updates:
   # Fetch and update latest `npm` packages
@@ -7,8 +8,6 @@ updates:
       interval: daily
       time: '00:00'
     open-pull-requests-limit: 10
-    reviewers: []
-    assignees: []
     commit-message:
       prefix: fix
       prefix-development: chore
@@ -20,8 +19,6 @@ updates:
       interval: daily
       time: '00:00'
     open-pull-requests-limit: 10
-    reviewers: []
-    assignees: []
     commit-message:
       prefix: fix
       prefix-development: chore
