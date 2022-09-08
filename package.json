@@ -1,0 +1,68 @@
+{
+  "name": "react-penrose-menu",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Endless Menu for React.",
+  "keywords": [
+    "javascript",
+    "react",
+    "reactjs",
+    "menu"
+  ],
+  "homepage": "https://github.com/oev-berlin/react-penrose-menu",
+  "bugs": {
+    "url": "https://github.com/oev-berlin/react-penrose-menu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oev-berlin/react-penrose-menu.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "OEV Berlin",
+    "email": "digitalcampus360@oev.de",
+    "url": "https://digitalcampus360.de/"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "dev": "node ./src/index.js",
+    "build": "echo \"No build script specified\"",
+    "start": "echo \"No start script specified\"",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lint:js": "eslint --ext \".js,.jsx,.mjs,.cjs,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check --ignore-path .gitignore .",
+    "lintfix": "yarn lint:js --fix && prettier --write --list-different --ignore-path .gitignore . ",
+    "prepare": "husky install",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-plugin": "^7.18.10",
+    "@babel/preset-env": "^7.19.0",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/jest": "^29.0.0",
+    "babel-jest": "^29.0.2",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-babel": "^0.2.2",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.1",
+    "eslint-plugin-no-only-tests": "^3.0.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.15.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "husky": "^8.0.1",
+    "jest": "^29.0.2",
+    "prettier": "^2.7.1"
+  }
+}

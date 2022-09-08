@@ -1,0 +1,60 @@
+name: 'Continuous Integration'
+
+on:
+  push:
+    branches: ['main']
+    paths-ignore:
+      - '.husky/**'
+      - '.gitignore'
+      - 'README.md'
+  pull_request:
+    branches: ['main']
+    paths-ignore:
+      - '.husky/**'
+      - '.gitignore'
+      - 'README.md'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install dependencies 👨🏻‍💻
+        run: yarn install --frozen-lockfile --immutable
+
+      - name: Run linter ✨
+        run: yarn lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install dependencies 👨🏻‍💻
+        run: yarn install --frozen-lockfile --immutable
+
+      - name: Run tests 👀
+        run: yarn test --coverage
+
+      - name: Archive code coverage report 💾
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage
