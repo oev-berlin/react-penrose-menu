@@ -5,26 +5,30 @@
     "node": true,
     "jest/globals": true
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "requireConfigFile": true,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
     "sourceType": "module"
   },
   "extends": [
     "airbnb-base",
-    "airbnb-babel",
     "plugin:jest/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
   "ignorePatterns": [],
-  "plugins": ["@babel", "no-only-tests", "no-secrets"],
+  "plugins": [ "no-only-tests", "no-secrets"],
   "rules": {
-    "import/extensions": ["error", "ignorePackages"],
+    "import/extensions": [0, "ignorePackages"],
     "import/prefer-default-export": "off",
     "no-only-tests/no-only-tests": "error",
     "no-secrets/no-secrets": "error",
-    "unicorn/no-array-for-each": "off"
+    "unicorn/no-array-for-each": "off",
+    "import/no-unresolved": "off"
   }
 }
