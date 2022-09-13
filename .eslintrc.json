@@ -16,16 +16,15 @@
   },
   "extends": [
     "airbnb-base",
-    "airbnb-babel",
     "plugin:jest/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
   "ignorePatterns": [],
-  "plugins": ["@babel", "no-only-tests", "no-secrets"],
+  "plugins": [ "no-only-tests", "no-secrets"],
   "rules": {
-    "import/extensions": [false, "ignorePackages"],
+    "import/extensions": [0, "ignorePackages"],
     "import/prefer-default-export": "off",
     "no-only-tests/no-only-tests": "error",
     "no-secrets/no-secrets": "error",
