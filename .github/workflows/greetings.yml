@@ -1,0 +1,7 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    uses: oev-berlin/.github/.github/workflows/greetings.yml@main

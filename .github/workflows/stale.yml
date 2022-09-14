@@ -1,0 +1,9 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+    - cron: '35 14 * * *'
+
+jobs:
+  stale:
+    uses: oev-berlin/.github/.github/workflows/stale.yml@main
