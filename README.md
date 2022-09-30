@@ -1,4 +1,4 @@
-![Logo of react-penrose-menu](/docs/assets/images/facebook_cover_photo_2.png)
+![Logo of react-penrose-menu](/docs/assets/images/banner_1.png)
 
 # react-penrose-menu
 
