@@ -34,9 +34,9 @@
     "build": "echo \"No build script specified\"",
     "start": "echo \"No start script specified\"",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lint:js": "eslint --ext \".js,.jsx,.mjs,.cjs,.vue\" --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check --ignore-path .gitignore .",
-    "lintfix": "yarn lint:js --fix && prettier --write --list-different --ignore-path .gitignore . ",
+    "lint:js": "eslint --ext \".js,.jsx,.mjs,.cjs,.vue\" .",
+    "lint:prettier": "prettier --check .",
+    "lintfix": "yarn lint:js --fix && prettier --write --list-different . ",
     "prepare": "husky install",
     "test": "jest --coverage"
   },
